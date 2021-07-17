@@ -1,10 +1,8 @@
 🇦🇺 AU 03 = ss, ss.au.sshmax.net, 1443, encrypt-method=chacha20-ietf-poly1305, password=kRAxb8hPUxS0, udp-relay=false
-🇨🇦 CA 07 = ss, ss.sg.sshmax.net, 57478, encrypt-method=chacha20-ietf-poly1305, password=o4qygNrXw7cE, udp-relay=false
 🇩🇪 DE 32 = vmess, 18.193.122.123, 25275, username=eebfe76a-c71f-49e4-f983-983384d5dadf, tls=false
 🇫🇷 FR 34 = ss, 51.195.62.220, 811, encrypt-method=chacha20-ietf-poly1305, password=G!yBwPWH3Vao, udp-relay=false
-🇮🇳 IN 60 = ss, 137.59.52.107, 40093, encrypt-method=aes-256-gcm, password=x23Z4LGkGDkThZ9Kaz4DURQp, udp-relay=false
 🇮🇹 IT 63 = ss, 84.17.58.134, 50168, encrypt-method=aes-256-gcm, password=WCuz7yrfZSCQQXSNrtGPz2HT, udp-relay=false
 🇰🇷 KR 66 = ss, 52.79.60.0, 23290, encrypt-method=aes-256-gcm, password=boWiglZbWT, udp-relay=false
 🇷🇺 RU 102 = ss, 5.189.202.9, 31572, encrypt-method=aes-256-gcm, password=n8w4StnbVD9dmXYn4Ajt87EA, udp-relay=false
 🇬🇧 GB 44 = ss, 195.206.169.203, 31572, encrypt-method=aes-256-gcm, password=n8w4StnbVD9dmXYn4Ajt87EA, udp-relay=false
-🇺🇸 Heroku US = vmess, 104.19.32.14, 80, username=ad806487-2d26-4636-98b6-ab85cc8521f7, ws=true, ws-path=/, ws-headers=Host:"us.pacproxy.workers.dev", tfo=true
+🇺🇸 US Lifetime = vmess, 104.19.32.14, 80, username=ad806487-2d26-4636-98b6-ab85cc8521f7, ws=true, ws-path=/, ws-headers=Host:"us.pacproxy.workers.dev", tfo=true
