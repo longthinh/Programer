@@ -1,9 +1,12 @@
-const $ = new API(" Wishlist", true);
-let apps = ["1527416109","1573564366","520664855","1577567536","1575567577","1088694803","1575087856","1555743688","1520371417","1520370235","1530364526","1058024591","1575808014","1517339257","1193474997","364901807","796794370","896694807","904237743","952813813","1050576070","1209349510","1254940903","1282297037","1312014438","1344204781","1432739728","1442620678","1443988620","1448744070","1459055246","1470774095","1502903102","1503446680","1510265452","1519405335","1522680432","1523364368","1524435907","1527036273","1531055735","1547610115"];
+/*
+App monitor
+*/
+const $ = new API("App Monitor", true);
+let apps = ["1457369322","1344204781","1209349510","1459055246","1523364368","1254940903","1503446680","1547610115","1546719359","1520370235","1520371417","1524166698","1470774095","1282297037","364901807","918751511","796794370","1524435907","1527036273","1443988620","1442620678","1312014438","896694807","1510265452","904237743","1519405335","952813813"]; //appid
 if ($.read("apps") != "" && $.read("apps") != undefined) {
   apps = $.read("apps").split("，");
 }
-let reg = "us";
+let reg = "us"; //
 if ($.read("reg") != "" && $.read("reg") != undefined) {
   reg = $.read("reg");
 }
@@ -30,10 +33,10 @@ function format_apps(x) {
           apps_f[n_n[1]].push(n_n[0]);
         }
       } else {
-        notifys.push(`ID wrong: ${n}`);
+        notifys.push(`ID wrong:【${n}】`);
       }
     } else {
-      notifys.push(`ID wrong: ${n}`);
+      notifys.push(`ID wrong:【${n}】`);
     }
   });
   if (Object.keys(apps_f).length > 0) {
@@ -42,12 +45,12 @@ function format_apps(x) {
 }
 async function post_data(d) {
   try {
-    let app_monitor = $.read(" Wishlist - Leͥgeͣnͫd");
+    let app_monitor = $.read("app_monitor");
     if (app_monitor === "" || app_monitor === undefined) {
       app_monitor = {};
     } else {
       app_monitor = JSON.parse(app_monitor);
-      $.info(app_monitor)
+      console.log(JSON.stringify(app_monitor));
     }
     let infos = {};
     await Promise.all(
@@ -73,21 +76,21 @@ async function post_data(d) {
                   ) {
                     if (x.version !== app_monitor[x.trackId].v) {
                       notifys.push(
-                        `${flag(k)} 🥳 ${x.trackName}:upgrade ${x.version}`
+                        `${flag(k)}🧩${x.trackName}:upgrade【${x.version}】`
                       );
                     }
                     if (x.formattedPrice !== app_monitor[x.trackId].p) {
                       notifys.push(
-                        `${flag(k)} 💸 ${x.trackName}:newprice ${x.formattedPrice}`
+                        `${flag(k)}💰${x.trackName}:price【${x.formattedPrice}】`
                       );
                     }
                   }
                 } else {
                   notifys.push(
-                    `${flag(k)} 🎉 ${x.trackName}:version ${x.version}`
+                    `${flag(k)}🧩${x.trackName}:version【${x.version}】`
                   );
                   notifys.push(
-                    `${flag(k)} 💵 ${x.trackName}:price ${x.formattedPrice}`
+                    `${flag(k)}💰${x.trackName}:price【${x.formattedPrice}】`
                   );
                 }
               });
@@ -100,12 +103,12 @@ async function post_data(d) {
       })
     );
     infos = JSON.stringify(infos);
-    $.write(infos, " Wishlist - Leͥgeͣnͫd");
+    $.write(infos, "app_monitor");
     if (notifys.length > 0) {
       notify(notifys);
       $.done();
     } else {
-      console.log("⚠️ Nothing...");
+      console.log("APP Monitor：No change version and price");
       $.done();
     }
   } catch (e) {
@@ -114,11 +117,122 @@ async function post_data(d) {
 }
 function notify(notifys) {
   notifys = notifys.join("\n");
-  $.notify(" Wishlist - Leͥgeͣnͫd", "", notifys);
+  console.log(JSON.stringify(notifys));
+  $.notify("APP Monitor", "", notifys);
 }
 function flag(x) {
   var flags = new Map([
+    ["AC", "🇦🇨"],
+    ["AF", "🇦🇫"],
+    ["AI", "🇦🇮"],
+    ["AL", "🇦🇱"],
+    ["AM", "🇦🇲"],
+    ["AQ", "🇦🇶"],
+    ["AR", "🇦🇷"],
+    ["AS", "🇦🇸"],
+    ["AT", "🇦🇹"],
+    ["AU", "🇦🇺"],
+    ["AW", "🇦🇼"],
+    ["AX", "🇦🇽"],
+    ["AZ", "🇦🇿"],
+    ["BB", "🇧🇧"],
+    ["BD", "🇧🇩"],
+    ["BE", "🇧🇪"],
+    ["BF", "🇧🇫"],
+    ["BG", "🇧🇬"],
+    ["BH", "🇧🇭"],
+    ["BI", "🇧🇮"],
+    ["BJ", "🇧🇯"],
+    ["BM", "🇧🇲"],
+    ["BN", "🇧🇳"],
+    ["BO", "🇧🇴"],
+    ["BR", "🇧🇷"],
+    ["BS", "🇧🇸"],
+    ["BT", "🇧🇹"],
+    ["BV", "🇧🇻"],
+    ["BW", "🇧🇼"],
+    ["BY", "🇧🇾"],
+    ["BZ", "🇧🇿"],
+    ["CA", "🇨🇦"],
+    ["CF", "🇨🇫"],
+    ["CH", "🇨🇭"],
+    ["CK", "🇨🇰"],
+    ["CL", "🇨🇱"],
+    ["CM", "🇨🇲"],
+    ["CN", "🇨🇳"],
+    ["CO", "🇨🇴"],
+    ["CP", "🇨🇵"],
+    ["CR", "🇨🇷"],
+    ["CU", "🇨🇺"],
+    ["CV", "🇨🇻"],
+    ["CW", "🇨🇼"],
+    ["CX", "🇨🇽"],
+    ["CY", "🇨🇾"],
+    ["CZ", "🇨🇿"],
+    ["DE", "🇩🇪"],
+    ["DG", "🇩🇬"],
+    ["DJ", "🇩🇯"],
+    ["DK", "🇩🇰"],
+    ["DM", "🇩🇲"],
+    ["DO", "🇩🇴"],
+    ["DZ", "🇩🇿"],
+    ["EA", "🇪🇦"],
+    ["EC", "🇪🇨"],
+    ["EE", "🇪🇪"],
+    ["EG", "🇪🇬"],
+    ["EH", "🇪🇭"],
+    ["ER", "🇪🇷"],
+    ["ES", "🇪🇸"],
+    ["ET", "🇪🇹"],
+    ["EU", "🇪🇺"],
+    ["FI", "🇫🇮"],
+    ["FJ", "🇫🇯"],
+    ["FK", "🇫🇰"],
+    ["FM", "🇫🇲"],
+    ["FO", "🇫🇴"],
+    ["FR", "🇫🇷"],
+    ["GA", "🇬🇦"],
+    ["GB", "🇬🇧"],
+    ["HK", "🇭🇰"],
+    ["ID", "🇮🇩"],
+    ["IE", "🇮🇪"],
+    ["IL", "🇮🇱"],
+    ["IM", "🇮🇲"],
+    ["IN", "🇮🇳"],
+    ["IS", "🇮🇸"],
+    ["IT", "🇮🇹"],
+    ["JP", "🇯🇵"],
+    ["KR", "🇰🇷"],
+    ["MO", "🇲🇴"],
+    ["MX", "🇲🇽"],
+    ["MY", "🇲🇾"],
+    ["NL", "🇳🇱"],
+    ["PH", "🇵🇭"],
+    ["RO", "🇷🇴"],
+    ["RS", "🇷🇸"],
+    ["RU", "🇷🇺"],
+    ["RW", "🇷🇼"],
+    ["SA", "🇸🇦"],
+    ["SB", "🇸🇧"],
+    ["SC", "🇸🇨"],
+    ["SD", "🇸🇩"],
+    ["SE", "🇸🇪"],
+    ["SG", "🇸🇬"],
+    ["TH", "🇹🇭"],
+    ["TN", "🇹🇳"],
+    ["TO", "🇹🇴"],
+    ["TR", "🇹🇷"],
+    ["TV", "🇹🇻"],
+    ["TW", "🇨🇳"],
+    ["UK", "🇬🇧"],
+    ["UM", "🇺🇲"],
     ["US", "🇺🇸"],
+    ["UY", "🇺🇾"],
+    ["UZ", "🇺🇿"],
+    ["VA", "🇻🇦"],
+    ["VE", "🇻🇪"],
+    ["VG", "🇻🇬"],
+    ["VI", "🇻🇮"],
     ["VN", "🇻🇳"],
   ]);
   return flags.get(x.toUpperCase());
