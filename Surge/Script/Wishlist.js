@@ -73,21 +73,21 @@ async function post_data(d) {
                   ) {
                     if (x.version !== app_monitor[x.trackId].v) {
                       notifys.push(
-                        `${flag(k)} 🥳 ${x.trackName}:upgrade ${x.version}`
+                        `${flag(k)} 🎉 ${x.trackName} <Release/> ${x.version}`
                       );
                     }
                     if (x.formattedPrice !== app_monitor[x.trackId].p) {
                       notifys.push(
-                        `${flag(k)} 💸 ${x.trackName}:newprice ${x.formattedPrice}`
+                        `${flag(k)} 💸 ${x.trackName} <Newprice/> ${x.formattedPrice}`
                       );
                     }
                   }
                 } else {
                   notifys.push(
-                    `${flag(k)} 🎉 ${x.trackName}:version ${x.version}`
+                    `${flag(k)} 🥳 ${x.trackName} <Version/> ${x.version}`
                   );
                   notifys.push(
-                    `${flag(k)} 💵 ${x.trackName}:price ${x.formattedPrice}`
+                    `${flag(k)} 💵 ${x.trackName} <Price/> ${x.formattedPrice}`
                   );
                 }
               });
