@@ -10,7 +10,7 @@ $.done({body:Base64.encode(vmess.toString().replace(/,/g,"\n"))});
 })
 
 function sub(x){let raw=JSON.parse(Base64.decode(x.split("vmess://")[1]))
-raw.ps =`${raw.ps.slice(6,-11).toUpperCase()}-LK`;raw["host"]=`${bug}`;return`vmess://${Base64.encode(JSON.stringify(raw))}`}
+raw.ps =`${raw.ps.slice(6,-11).toUpperCase()}-Long Thinh`;raw["host"]=`${bug}`;return`vmess://${Base64.encode(JSON.stringify(raw))}`}
 function Base64Code(){const b64chars="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";const b64tab=(function(bin){const t={};let i=0;const l=bin.length;for(;i<l;i++)t[bin.charAt(i)]=i;return t;})(b64chars);const fromCharCode=String.fromCharCode;const cb_utob=function(c){let cc;if(c.length<2){cc=c.charCodeAt(0);return cc<0x80?c:cc<0x800?fromCharCode(0xc0|(cc>>>6))+fromCharCode(0x80|(cc&0x3f)):fromCharCode(0xe0|((cc>>>12)&0x0f))+
 fromCharCode(0x80|((cc>>>6)&0x3f))+
 fromCharCode(0x80|(cc&0x3f));}else{cc=0x10000+
