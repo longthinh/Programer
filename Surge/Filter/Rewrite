@@ -19,3 +19,4 @@ URL-REGEX,https?:\/\/youtubei.googleapis.com\/.+ad_break,REJECT
 URL-REGEX,https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log),REJECT
 URL-REGEX,https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat,REJECT
 URL-REGEX,https?:\/\/[\w-]+\.googlevideo\.com\/.+&oad,REJECT-TINYGIF
+URL-REGEX,^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/att\/get,REJECT-TINYGIF
