@@ -9,18 +9,10 @@
 ^https?://www.facebook.com/adnw_sync url reject-img
 
 #Youtube
-^https?:\/\/.+.googlevideo.com\/ptracking\?pltype url reject-img
-^https?:\/\/.+.youtube.com\/api\/stats\/ads url reject-img
-^https?:\/\/.+.youtube.com\/get_midroll_ url reject-img
-^https?:\/\/.+.youtube.com\/pagead\/ url reject-img
-^https?:\/\/.+.youtube.com\/ptracking\? url reject-img
-^https?:\/\/.+.youtube.com\/_get_ads url reject-img
-^https?:\/\/youtubei.googleapis.com\/.+ad_break url reject-img
-^https?:\/\/youtubei.googleapis.com\/youtubei\/.+(ad|log) url reject-img
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adformat url reject-img
-^https?:\/\/[\w-]+\.googlevideo\.com\/.+&oad url reject-img
-^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/att\/get url reject-img
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+(&oad|ctier) url reject-img
 ^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-img
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-img
 ^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat= url reject-img
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/att\/get url reject-img
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event url reject-img
+^https://youtubei.googleapis.com/youtubei/v1/player/ad_break url reject-img
