@@ -1,0 +1,15 @@
+(^https?:\/\/(?!redirector)[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+)(ctier=L)(&.+) $1$4 header
+
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+(&oad|ctier)
+
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads
+
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking)
+
+^https?:\/\/\s.youtube.com/api/stats/qoe?.*adformat=
+
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/att\/get
+
+^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event
+
+^https://youtubei.googleapis.com/youtubei/v1/player/ad_break
