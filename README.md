@@ -5,6 +5,7 @@
 - 📫 How to reach me ...
 
  Copyright:
-· @longthinh -  Leͥgeͣnͫd
-· @langkhach270389 - Lãng Khách
-· @RoSino18k
+· longthinh
+· langkhach270389
+· ManhDuong
+· RoSino18k
