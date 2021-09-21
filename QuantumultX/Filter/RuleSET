@@ -161,7 +161,6 @@ HOST-SUFFIX,org.zaloapp.ads.zdn.vn,REJECT
 HOST-SUFFIX,zalo-ads-td.zadn.vn,REJECT
 HOST-SUFFIX,ad.360in.com,REJECT
 HOST-SUFFIX,reports.crashlytics.com,REJECT
-HOST-SUFFIX,attr.appsflyer.com,REJECT
 HOST-SUFFIX,gstaticadssl.l.google.com,REJECT
 HOST-SUFFIX,static.doubleclick.net,REJECT
 HOST-SUFFIX,4hag.adj.st,REJECT
@@ -2713,8 +2712,6 @@ HOST-SUFFIX,at-adserver.alltop.com,REJECT
 HOST-SUFFIX,athena-ads.wikia.com,REJECT
 HOST-SUFFIX,atlassolutions.com,REJECT
 HOST-SUFFIX,atp.io,REJECT
-HOST-SUFFIX,attractiveafternoon.com,REJECT
-HOST-SUFFIX,attributiontracker.com,REJECT
 HOST-SUFFIX,atwola.com,REJECT
 HOST-SUFFIX,auctionads.com,REJECT
 HOST-SUFFIX,auctionads.net,REJECT
@@ -5007,7 +5004,6 @@ HOST-SUFFIX,thirstytwig.com,REJECT
 HOST-SUFFIX,thoorest.com,REJECT
 HOST-SUFFIX,threechurch.com,REJECT
 HOST-SUFFIX,thrnt.com,REJECT
-HOST-SUFFIX,throattrees.com,REJECT
 HOST-SUFFIX,thruport.com,REJECT
 HOST-SUFFIX,tia.timeinc.net,REJECT
 HOST-SUFFIX,ticklesign.com,REJECT
