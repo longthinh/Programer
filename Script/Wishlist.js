@@ -1,5 +1,5 @@
 const $ = new API(" Wishlist", true);
-let apps = ["1344204781","1209349510","1470774095","1282297037","1254940903","1443988620","1442620678","1510265452","904237743","952813813"];
+let apps = ["1575808014","1497080097","1485112570","505401182","1344204781","1209349510","1470774095","1282297037","1254940903","1443988620","1442620678","1510265452","904237743","952813813"];
 if ($.read("apps") != "" && $.read("apps") != undefined) {
   apps = $.read("apps").split("，");
 }
@@ -84,10 +84,10 @@ async function post_data(d) {
                   }
                 } else {
                   notifys.push(
-                    `${flag(k)} 🦄 ${x.trackName} <Version/> ${x.version}`
+                    `${flag(k)} 🎯 ${x.trackName} <Version/> ${x.version}`
                   );
                   notifys.push(
-                    `${flag(k)} 💵 ${x.trackName} <Price/> ${x.formattedPrice}`
+                    `${flag(k)} 💰 ${x.trackName} <Price/> ${x.formattedPrice}`
                   );
                 }
               });
